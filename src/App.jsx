@@ -47,7 +47,7 @@ function App() {
          />
          <Reset handleReset={handleReset} />
          </>
-      )}
+      )} 
      
       </div>
   );
