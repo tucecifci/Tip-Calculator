@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <>
+   <div>
       <BillInput billValue={billValue} setBillValue={setBillValue} />
       <SelectPercentage
         title="How did you like the service?"
@@ -38,14 +38,18 @@ function App() {
         selectedValue={userBSelection}
         onSelectionChange={handleUserBChange}
       />
-      <Output
-        billValue={billValue}
-        userASelection={userASelection}
-        userBSelection={userBSelection}
-      />
-
-      <Reset handleReset={handleReset} />
-    </>
+      {billValue > 0 && (
+         <>
+         <Output
+           billValue={billValue}
+           userASelection={userASelection}
+           userBSelection={userBSelection}
+         />
+         <Reset handleReset={handleReset} />
+         </>
+      )}
+     
+      </div>
   );
 }
 
