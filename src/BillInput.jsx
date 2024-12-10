@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 
-function BillInput() {
-const [inputValue, SetInputValue] = useState("");
-
+function BillInput({billValue, setBillValue}) {
 const handleChange = (event) =>{
-SetInputValue(event.target.value);
+setBillValue(event.target.value);
 }
   return (
     <>
@@ -13,10 +11,9 @@ SetInputValue(event.target.value);
         <input 
         type="number"
         id='billInput'
-        value={inputValue}
+        value={billValue}
         onChange={handleChange}
         />
-        <p>{inputValue} </p>
     </div>
     </>
   )

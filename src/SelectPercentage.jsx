@@ -11,7 +11,6 @@ function SelectPercentage({ title, selectedValue, onSelectionChange }) {
       <select
         name="percentage"
         id="percentage"
-        defaultValue={0}
         value={selectedValue}
         onChange={handleChange}
       >
