@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Reset() {
+function Reset({handleReset}) {
+
   return (
     <div>
-        <button>Reset</button>
+        <button onClick={handleReset} >Reset</button>
     </div>
   )
 }

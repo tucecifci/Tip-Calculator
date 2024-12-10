@@ -19,9 +19,15 @@ function App() {
     setUserBSelection(value);
   };
 
+  const handleReset = () => {
+    setBillValue("");
+    setUserASelection(0);
+    setUserBSelection(0);
+  };
+
   return (
     <>
-      <BillInput billValue={billValue} setBillValue={setBillValue}  />
+      <BillInput billValue={billValue} setBillValue={setBillValue} />
       <SelectPercentage
         title="How did you like the service?"
         selectedValue={userASelection}
@@ -32,9 +38,13 @@ function App() {
         selectedValue={userBSelection}
         onSelectionChange={handleUserBChange}
       />
-      <Output billValue={billValue} userASelection={userASelection} userBSelection={userBSelection} />
+      <Output
+        billValue={billValue}
+        userASelection={userASelection}
+        userBSelection={userBSelection}
+      />
 
-      <Reset />
+      <Reset handleReset={handleReset} />
     </>
   );
 }
